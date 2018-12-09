@@ -6,7 +6,7 @@ const routes = [
   }, {
     path: '/testorce',
     name: 'force',
-    component: () => import('@/views/test/Force')
+    component: () => import ('@/views/test/Force')
   }, {
     path: '/testechart',
     name: 'echart',
@@ -15,6 +15,10 @@ const routes = [
     path: '/testVconsole',
     name: 'testVconsole',
     component: () => import('@/views/test/Vconsole')
+  },  {
+    path: '/testFloat',
+    name: 'test-float',
+    component: () => import('@/views/demo/TestFloat')
   }
 ]
 export default routes;

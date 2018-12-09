@@ -4,6 +4,7 @@
     <router-link to="/testechart">echarts</router-link>
     <router-link to="/testforce">force</router-link>
     <router-link to="/testVconsole">testVconsole</router-link>  
+    <router-link to="/testFloat">testFloat</router-link>  
   </div>
 </template>
 
