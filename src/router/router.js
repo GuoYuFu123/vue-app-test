@@ -19,6 +19,10 @@ const routes = [
     path: '/testFloat',
     name: 'test-float',
     component: () => import('@/views/demo/TestFloat')
+  },{
+    path: '/testCom',
+    name: 'test-com',
+    component: () => import('@/views/demo/component')
   }
 ]
 export default routes;
