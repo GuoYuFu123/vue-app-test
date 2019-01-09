@@ -1,6 +1,6 @@
-# app
+# vue-app-test
 
-> vue
+> vue test
 
 ## Build Setup
 
