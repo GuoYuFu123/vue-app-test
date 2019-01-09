@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class='hello'>
         <h1>{{ msg }}</h1>
         <router-link to='/testechart'>echarts</router-link>
@@ -11,15 +10,6 @@
         <el-button type='primary' @click='windowReplace'>windowReplace</el-button>
         <router-link to='/tree'>table tree</router-link>
     </div>
-=======
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <router-link to="/testechart">echarts</router-link>
-    <router-link to="/testforce">force</router-link>
-    <router-link to="/testVconsole">testVconsole</router-link>  
-    <router-link to="/testFloat">testFloat</router-link>  
-  </div>
->>>>>>> 6493e95d3a18f7614e48e76da9dd4bc01b8e36f2
 </template>
 
 <script>
