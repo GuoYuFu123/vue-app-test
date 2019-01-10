@@ -9,6 +9,7 @@
         <router-link to='/demotable'>合并单元格</router-link>
         <el-button type='primary' @click='windowReplace'>windowReplace</el-button>
         <router-link to='/tree'>table tree</router-link>
+        <router-link to='/select-test'>select-test</router-link>
     </div>
 </template>
 

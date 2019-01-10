@@ -43,6 +43,10 @@ const routes = [
     path: '/tree',
     name: 'tree-table',
     component: () => import('@/views/demo/IndexContentList')
+  },{
+      path: '/select-test',
+      name: 'select-test',
+      component: () => import('@/views/demo/Select')
   }
 ]
 export default routes

@@ -16,14 +16,16 @@
 
           </div>
         </div>
-        <Icon type="ios-arrow-down" :class="{rotate: show}"/>
+        <!-- <Icon type="ios-arrow-down" :class="{rotate: show}"/> -->
+        <i class="el-icon-arrow-down" :class="{rotate: show}"></i>
       </div>
 
       <div class="list" v-if="show">
         <ul>
           <li class="clear" @click="clearSelect">清空选项</li>
           <li v-for="(item, index) in list" :class="{actived: active(item.value)}" :key="index" @click="onClick(item.value)">
-             {{item.text}}<Icon type="ios-checkmark" size='30' v-show="active(item.value)"/>
+             {{item.text}}<i class="el-icon-arrow-up" size='30' v-show="active(item.value)"></i>            
+            <!-- <Icon type="ios-checkmark" size='30' v-show="active(item.value)"/> -->
           </li>
         </ul>
       </div>
