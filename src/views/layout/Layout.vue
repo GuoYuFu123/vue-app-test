@@ -6,7 +6,7 @@
         <div class="con">
             <v-tag></v-tag>
             <div class="content">
-                content
+               <router-view></router-view>
             </div>
         </div>
     </div>

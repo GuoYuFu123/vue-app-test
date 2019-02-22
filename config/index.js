@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/manager': {
+            target: 'http://duoduo.sagacloud.cn',
+            changeOrigin: true
+        },
+        '/server': {
+            target: 'http://duoduo.sagacloud.cn',
+            changeOrigin: true
+        },
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

@@ -1,6 +1,6 @@
 <template>
-    <div class='side-nav'>
-        <el-menu
+    <div v-if='isSideMenu' class='side-nav'>
+        <el-menu            
             default-active='1-4-1'
             class='el-menu-vertical-demo'
             background-color="#545c64"
@@ -46,7 +46,7 @@ export default {
         }        
     },
      computed: {
-        ...mapGetters(['isCollapse'])
+        ...mapGetters(['isCollapse', 'isSideMenu'])
     },
     methods: {
       handleOpen(key, keyPath) {

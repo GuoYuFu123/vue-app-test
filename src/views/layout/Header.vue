@@ -5,28 +5,9 @@
                 <img v-if='!isCollapse' class='logo' src='@/assets/logo.png' alt='加载失败'>
                 <i class='el-icon-menu switch' @click='switchHandle'></i>
             </h1>
-            <div v-if='!isMobile' class='main-nav'>
-                <el-menu
-                    :default-active='activeIndex'
-                    class='el-menu-demo'
-                    background-color='#545c64'
-                    text-color='#fff'
-                    active-text-color='#ffd04b'
-                    mode='horizontal'
-                    @select='handleSelect'
-                >
-                    <el-menu-item v-for="(item,index) in menuArr" :key='index' :index='item.index'>{{item.name}}</el-menu-item>
-                </el-menu>
-            </div>
-            <el-dropdown v-if='isMobile'>
-                <span class='el-dropdown-link'>
-                    <i class='el-icon-menu switch'></i>
-                </span>
-                <el-dropdown-menu slot='dropdown'>
-                    <el-dropdown-item v-for='(item,index) in menuArr' :key='index'>{{item.name}}</el-dropdown-item>
-                  
-                </el-dropdown-menu>
-            </el-dropdown>
+            <h1 v-if='isMobile'>
+                <i class='el-icon-menu switch' @click='switchMenuHandle'></i>
+            </h1>
             <div class='setting'>
                 <i class='el-icon-setting'></i>
                 <i class='el-icon-rank'></i>
@@ -43,24 +24,6 @@ export default {
     data() {
         return {
             activeIndex: '1',
-            menuArr: [
-                {
-                    index: '1',
-                    name: '处理中心'
-                },{
-                    index: '2',
-                    name: '报警中心'
-                },{
-                    index: '3',
-                    name: '消息中心'
-                },{
-                    index: '4',
-                    name: '订单管理'
-                },{
-                    index: '5',
-                    name: '设置管理'
-                }
-            ]
         }
     },
     computed: {
@@ -70,6 +33,9 @@ export default {
         handleSelect() {},
         switchHandle() {
             this.$store.commit('SET_COLLAPSE')
+        },
+        switchMenuHandle() {
+            this.$store.commit('SET_SIDE_MENU')
         }
     }
 }
