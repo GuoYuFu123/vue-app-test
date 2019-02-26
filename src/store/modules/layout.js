@@ -44,14 +44,18 @@ var author = {
         },
         //切换手机模式  [true|是 or false|否]
         SET_MOBILE(state,flag) {
-            state.isMobile = flag
-            if (flag) { //手机+没有折叠
-                state.isCollapse =  false
-                state.isTopSideMenu = false;
-            } 
-            if (!flag) { // web
+            if (flag > 1000){
+                state.isMobile = false
                 state.isCollapse = false
                 state.isTopSideMenu = true;
+            } else if (flag > 500){
+                state.isMobile = false
+                state.isCollapse = true
+                state.isTopSideMenu = true;
+            } else {
+                state.isMobile = true
+                state.isCollapse = false
+                state.isTopSideMenu = false;
             }
         },
         //是否显示顶部导航

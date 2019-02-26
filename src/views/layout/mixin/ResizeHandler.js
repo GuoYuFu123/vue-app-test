@@ -9,18 +9,18 @@ export default {
     window.addEventListener('resize', this.resizeHandler)
   },
   mounted() {
-    const isMobile = this.isMobileHandle()  
-      store.commit('SET_MOBILE', isMobile)  
+    const rectWidth = this.isMobileHandle()  
+      store.commit('SET_MOBILE', rectWidth)  
   },
   methods: {
       isMobileHandle() {
       const rect = body.getBoundingClientRect()
-      return rect.width - RATIO < WIDTH   //1027
+      return rect.width
     },
     resizeHandler() {
       if (!document.hidden) {
-          const isMobile = this.isMobileHandle()
-          store.commit('SET_MOBILE', isMobile)
+          const rectWidth = this.isMobileHandle()
+          store.commit('SET_MOBILE', rectWidth)
       }
     }
   }
