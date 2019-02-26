@@ -1,14 +1,16 @@
 <template>
-    <div v-if="isTopSideMenu" class='side-nav' :style='isMobile?"width:100%;":"width:201px;"'>
+    <div v-if="isTopSideMenu" class='side-nav' :style='isMobile?"width:100%;":isCollapse?"":"width:200px;"'>
         <el-menu                       
             default-active='1-4-1'
-            class='el-menu-vertical-demo'
+            :class='isMobile ? "": "el-menu-vertical-demo"'
             background-color="#364150"
             text-color="#fff"
             active-text-color="#ffd04b"
             @open='handleOpen'
             @close='handleClose'
             :collapse='isCollapse'
+            router
+            unique-opened 
         >
             <template v-for='menu in menus' >
                 <el-menu-item v-if='menu.isLeaf' :index='menu.path' :key='menu.path'>

@@ -5,7 +5,7 @@
   flex-direction: column;
   .header {
     height: 50px;
-    border-bottom: 1px solid #2B3643;
+    // border-bottom: 1px solid #2B3643;
     background-color: #2B3643;
     .switch {
         color: #fff;
@@ -16,7 +16,7 @@
     .web-box {
       display: flex;
       justify-content: space-between;
-      h1 {
+     .logo-box {
         .logo {
             margin-top: 18px;
             margin-left: 15px;
@@ -40,9 +40,6 @@
         li:hover {
             background-color: #3f4f62;
         }
-        // .icon {
-        //     cursor: pointer;
-        // }
       }
     }
     .mobile-web {
@@ -52,29 +49,41 @@
   }
   .main-con {
     flex: 1;
-    display: flex;
-    // flex-direction: column;
+    display: flex;    
     .side-nav {
+        background: #364150;
         .el-menu-vertical-demo:not(.el-menu--collapse) {
+            width: 200px;
             height: 100%;
         }
+        .el-menu {
+            border: none;
+        }
         .el-submenu .el-submenu__title {
-                    height: 48px;
-                    line-height: 48px;
-                }
+            height: 48px;
+            line-height: 48px;
+            padding: 0 12px!important;
+        }
+        .el-menu--collapse {
+            width: 48px;
+        }
     }
     .con {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
       .tag {
           padding-top:10px;
             height: 40px;
             border-bottom: @border-style;
       }
       .content {
-        padding: 10px;
+          overflow: auto;
+          padding: 10px;
       }
     }
   }
+}
+#app {
+    height: 100%;
 }

@@ -10,22 +10,22 @@ var author = {
         isTopSideMenu: false,
         menus: [
             {
-                icon: "el-icon-fa-bank",
+                icon: "el-icon-tickets",
                 isLeaf: false,
                 name: "系统管理",
                 path: "/system",
                 children: [
                     {
-                        icon: "el-icon-fa-database",
+                        icon: "el-icon-tickets",
                         isLeaf: true,
-                        name: "Redis数据",
-                        path: "/system/redis"
+                        name: "demo1",
+                        path: "/demo1"
                     },
                     {
-                        icon: "el-icon-fa-database",
+                        icon: "el-icon-tickets",
                         isLeaf: true,
-                        name: "Redis数据",
-                        path: "/system/redis1"
+                        name: "demo2",
+                        path: "/demo2"
                     }
                 ]
             }

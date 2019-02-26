@@ -5,9 +5,13 @@ const routes = [
     component: () => import('@/views/layout/Layout'),
     children:[ 
         {
-            path: 'form',
+            path: 'demo1',
             name: '表单',
             component: () => import('@/views/demo/nestedtable'),
+        }, {
+            path: 'demo2',
+            name: '表单2',
+            component: () => import('@/views/demo/Cascade'),
         },
 
     ]

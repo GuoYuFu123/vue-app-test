@@ -1,13 +1,13 @@
 <template>
     <div class='header'>
         <div class='web-box'>
-            <h1 v-if='!isMobile'>
+            <div  class='logo-box' v-if='!isMobile'>
                 <img v-if='!isCollapse' class='logo' src='@/assets/logo.png' alt='加载失败'>
                 <i class='el-icon-menu switch' @click='switchHandle'></i>
-            </h1>
-            <h1 v-if='isMobile'>
+            </div>
+            <div class="logo-box" v-if='isMobile'>
                 <img class='logo' src='@/assets/logo.png' alt='加载失败'>                
-            </h1>
+            </div>
             <ul class='setting'>
                 <li>
                     <el-badge :value='2' class='item'>
