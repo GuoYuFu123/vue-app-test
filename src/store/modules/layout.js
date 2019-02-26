@@ -7,33 +7,56 @@ var author = {
     state: {
         isCollapse: false,
         isMobile: false,
-        isSideMenu: true 
+        isTopSideMenu: false,
+        menus: [
+            {
+                icon: "el-icon-fa-bank",
+                isLeaf: false,
+                name: "系统管理",
+                path: "/system",
+                children: [
+                    {
+                        icon: "el-icon-fa-database",
+                        isLeaf: true,
+                        name: "Redis数据",
+                        path: "/system/redis"
+                    },
+                    {
+                        icon: "el-icon-fa-database",
+                        isLeaf: true,
+                        name: "Redis数据",
+                        path: "/system/redis1"
+                    }
+                ]
+            }
+        ]
     },
     getters: {
         isCollapse: state => state.isCollapse,
         isMobile: state => state.isMobile,
-        isSideMenu: state => state.isSideMenu
+        isTopSideMenu: state => state.isTopSideMenu,
+        menus: state => state.menus
     },
     mutations: {
         //侧导航是否展开
         SET_COLLAPSE(state) {
             state.isCollapse = !state.isCollapse
         },
-        //切换手机模式
+        //切换手机模式  [true|是 or false|否]
         SET_MOBILE(state,flag) {
             state.isMobile = flag
-            if (flag && !state.isCollapse) { //手机+没有折叠
-                state.isCollapse =  true
-                state.isSideMenu = false;
+            if (flag) { //手机+没有折叠
+                state.isCollapse =  false
+                state.isTopSideMenu = false;
             } 
             if (!flag) { // web
                 state.isCollapse = false
-                state.isSideMenu = true;
+                state.isTopSideMenu = true;
             }
         },
-        //是否显示侧导航
-        SET_SIDE_MENU(state) {
-            state.isSideMenu = !state.isSideMenu
+        //是否显示顶部导航
+        SET_TOP_SIDE_MENU(state) {
+            state.isTopSideMenu = !state.isTopSideMenu
         }
     }
 }

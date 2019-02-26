@@ -1,8 +1,9 @@
 <template>
 <div id="layout">
     <v-header></v-header>
-    <div class="main-con">
-        <v-side-nav></v-side-nav>
+    <!--  -->
+    <div class="main-con" :style='isMobile ? "flex-direction: column;" : ""'>
+        <v-side-nav></v-side-nav>        
         <div class="con">
             <v-tag></v-tag>
             <div class="content">
@@ -21,6 +22,7 @@ import vSideNav from './SideNav'
 import vTag from './Tag'
 import '@/style/layout.less'
 
+import { mapGetters } from 'vuex'
 export default {
     name: 'layout',
     components : {
@@ -29,6 +31,9 @@ export default {
         vTag
     },
     mixins: [ResizeMixin],
+    computed: {
+        ...mapGetters(['isMobile'])
+    }
 
 }
 </script>

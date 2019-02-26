@@ -5,29 +5,21 @@ const WIDTH = 1024
 const RATIO = 3
 
 export default {
-//   watch: {
-//     $route(route) {
-//       if (this.device === 'mobile' && this.sidebar.opened) {
-//         // store.dispatch('closeSideBar', { withoutAnimation: false })
-//       }
-//     }
-//   },
   beforeMount() {
     window.addEventListener('resize', this.resizeHandler)
   },
   mounted() {
-    const isMobile = this.isMobile()  
+    const isMobile = this.isMobileHandle()  
       store.commit('SET_MOBILE', isMobile)  
   },
   methods: {
-    isMobile() {
+      isMobileHandle() {
       const rect = body.getBoundingClientRect()
-      return rect.width - RATIO < WIDTH
+      return rect.width - RATIO < WIDTH   //1027
     },
     resizeHandler() {
       if (!document.hidden) {
-        const isMobile = this.isMobile()
-          console.log(isMobile)
+          const isMobile = this.isMobileHandle()
           store.commit('SET_MOBILE', isMobile)
       }
     }
