@@ -1,10 +1,13 @@
 # vue-app-test
 
-> vue test
+> 支持屏幕的自适应布局
+
+## 演示
+![vue-project](me.gif)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
