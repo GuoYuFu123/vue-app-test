@@ -18,14 +18,14 @@ var author = {
                     {
                         icon: "el-icon-tickets",
                         isLeaf: true,
-                        name: "demo1",
-                        path: "/demo1"
+                        name: "test1",
+                        path: "/test1"
                     },
                     {
                         icon: "el-icon-tickets",
                         isLeaf: true,
-                        name: "demo2",
-                        path: "/demo2"
+                        name: "test2",
+                        path: "/test2"
                     }
                 ]
             }

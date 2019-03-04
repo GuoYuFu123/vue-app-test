@@ -5,14 +5,14 @@ const routes = [
     component: () => import('@/views/layout/Layout'),
     children:[ 
         {
-            path: 'demo1',
-            name: '表单',
-            component: () => import('@/views/demo/nestedtable'),
+            path: 'test1',
+            name: 'test1',
+            component: () => import('@/views/test/bus/test1'),
         }, {
-            path: 'demo2',
-            name: '表单2',
-            component: () => import('@/views/demo/Cascade'),
-        },
+            path: 'test2',
+            name: 'test2',
+            component: () => import('@/views/test/bus/test2'),
+        }
 
     ]
   },

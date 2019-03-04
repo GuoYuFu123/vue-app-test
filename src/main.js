@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import VueBus from './bus'
 
 import echarts from 'echarts'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -14,6 +15,7 @@ import './style/base.css'
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 
+Vue.use(VueBus)
 Vue.use(elementUI)
 
 /* eslint-disable no-new */
