@@ -26,6 +26,11 @@ var author = {
                         isLeaf: true,
                         name: "test2",
                         path: "/test2"
+                    },{
+                        icon: "el-icon-tickets",
+                        isLeaf: true,
+                        name: "table",
+                        path: "/table"
                     }
                 ]
             }
