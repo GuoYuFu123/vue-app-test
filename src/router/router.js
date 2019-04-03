@@ -16,6 +16,10 @@ const routes = [
             path: 'table',
             name: 'table',
             component: () => import('@/views/demo/table'),
+        },{
+            path: 'session',
+            name: 'table',
+            component: () => import('@/views/demo/session'),
         }
 
     ]
