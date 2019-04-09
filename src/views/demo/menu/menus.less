@@ -1,0 +1,75 @@
+@defaultHeight: 40px;
+@fontColor: #333333;
+@fontSize: 14px;
+@borderColor: #C2CEDB;
+@subBorderColor:  #5BA7FF;
+@subBackColor: #EEFAFF;
+@numBackColor: #F5A623;
+.menu-box {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    .sg-menu {   
+        font-family: 'PingFangSC-Regular';
+        color: @fontColor;
+        font-size: @fontSize;
+        cursor: pointer;
+        .sg-menu-case{
+            height: @defaultHeight;
+            line-height: @defaultHeight;
+            margin: 0 20px 0;
+            border-bottom: 1px solid @borderColor;
+            position: relative;  
+            overflow: hidden;          
+            .sg-menu-badge {
+                .el-badge__content {
+                    margin-top: 8px;
+                }
+            }
+            .sg-menu-num {
+                display: inline-block;
+                position: relative;
+                width: 24px;
+                height: 12px;
+                font-size: 8px;
+                line-height: 12px;
+                text-align: center;
+                background: @numBackColor;
+                border-radius: 3px;
+                color: #fff;
+            }
+            .sg-icon-arrow {
+                font-size: 12px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -7px;   
+                transition: transform .3s,-webkit-transform .3s;                          
+            }
+            .transform-arrow {
+                transform: rotateZ(90deg);       
+            }
+        }  
+        .sg-menu-case-unfold {
+            border-bottom: none;
+        } 
+        
+        
+    }
+    .sg-submenu-box {
+        padding-left: 46px;
+        background: @subBackColor;
+        border-left: 4px solid @subBorderColor;
+        .sg-submenu-case {
+            height: @defaultHeight;
+            line-height: @defaultHeight;
+            overflow: hidden;
+            .router-link-active {
+                color: @subBorderColor;
+            }
+        }
+    }
+}
+.menu-box-fold {
+    width: 60px;
+}

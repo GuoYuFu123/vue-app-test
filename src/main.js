@@ -11,6 +11,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import elementUI from 'element-ui'
 
 import './style/base.css'
+import './style/awesome.less'
 
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false

@@ -20,9 +20,24 @@ const routes = [
             path: 'session',
             name: 'table',
             component: () => import('@/views/demo/session'),
-        }
+        }, 
 
     ]
   },
+    {
+        path: '/menu',
+        name: 'table',
+        component: () => import('@/views/demo/menu/index'),
+    },
+    {
+        path: '/sgmenu',
+        name: 'table',
+        component: () => import('@/views/demo/menu/test'),
+    },
+    {
+        path: '/testmenu',
+        name: 'table',
+        component: () => import('@/views/test/recursion/index'),
+    }
 ]
 export default routes
